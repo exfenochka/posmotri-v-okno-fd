@@ -15,7 +15,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -95,7 +95,7 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;;
   font-weight: 400;
   font-size: 18px;
   color: #fff;
@@ -120,19 +120,19 @@ ol {
   outline-offset: 1px;
 }
 
-.search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
 .search-form__textfield {
   min-width: 228px;
-  border-top: 1px solid #fff;
+  border-top: 1px solid currentColor;
   border-right: 0;
   border-left: 0;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid currentColor;
   padding: 2px 0;
-  color: rgba(255, 255, 255, 0.3);
-  font-family: 'Fira Sans Condensed';
+  color: #fff;;
+  font-family: 'Fira Sans Condensed', sans-serif;;
   font-weight: 400;
   font-size: 18px;
   line-height: normal;
@@ -183,20 +183,15 @@ ol {
   opacity: 1;
 }
 
-.search-form__label:has(:focus-visible) {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
-}
-
 .search-form__checkbox:focus {
   outline: none;
 }
 
 .button {
-  border: 1px solid #fff;
   padding: 5px 73px;
   color: #fff;
-  font-family: 'Fira Sans Condensed';
+  border: 1px solid currentColor;
+  font-family: 'Fira Sans Condensed', sans-serif;;
   font-weight: 700;
   font-size: 18px;
   text-align: center;
@@ -225,6 +220,7 @@ ol {
 .more-button {
   width: 100%;
   height: 34px;
+  margin-top: 30px;
 }
 
 .search-form__submit-button {
@@ -255,10 +251,10 @@ ol {
 .content__list-container {
   position: relative;
   block-size: 298px;
-  overflow-y: scroll;
+  overflow: auto;
 }
 
-.content__list-item {
+.content__list-item:not(:last-child) {
   display: block;
   margin: 0 0 30px;
   cursor: pointer;
@@ -271,7 +267,7 @@ ol {
 }
 
 .content__card-link_current {
-  background-color: rgba(84, 80, 80, 0.4);
+  background-color: #545050;
 }
 
 .content__card-link:hover {
@@ -323,6 +319,11 @@ ol {
   font-size: 18px;
   color: #fff;
   line-height: 16.2px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
 }
 
 .content__video-card-thumbnail {
